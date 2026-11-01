@@ -1,0 +1,80 @@
+# The koi pond on the profile README.
+#
+# Visitors press a README button, which opens a `koi: feed` or `koi: wave`
+# issue. tools/pond.py counts it, redraws the pond log, and the run commits
+# that before it replies and closes the issue. Every night git-koi
+# (https://github.com/yalongwastaken/git-koi) redraws the koi from the day's
+# public activity, and the pond scene is rebuilt around it.
+name: Pond
+
+on:
+  issues:
+    types: [opened]
+  schedule:
+    # Just after midnight UTC: a fresh koi, and the mood resets to hungry.
+    - cron: "20 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/pond.yml, tools/pond.py, tools/pix.py]
+
+permissions:
+  contents: write
+  issues: write
+
+# One writer at a time. A queued run that GitHub replaces loses nothing,
+# because every run catches up on all open koi issues.
+concurrency:
+  group: pond
+  cancel-in-progress: false
+
+jobs:
+  pond:
+    if: github.event_name != 'issues' || contains(github.event.issue.title, 'koi')
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SCENE: ${{ github.event_name != 'issues' && '--scene' || '' }}
+    steps:
+      # The branch tip, not the event's commit, so a queued run sees the
+      # state the previous run pushed.
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Check the scorekeeping
+        run: python3 tools/test_pond.py
+
+      - name: Draw tonight's koi
+        if: github.event_name != 'issues'
+        uses: yalongwastaken/git-koi@7305e9b1fadee6f43d3b4fa543a25d4cde79856e # v1.0.2
+        with:
+          body: gold
+          output-dir: koi
+
+      - name: Count visitors, redraw and commit
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            python3 tools/pond.py run --repo "$GITHUB_REPOSITORY" --replies "$RUNNER_TEMP/replies.json" $SCENE
+            git add pond/state.json assets/pond-board.svg assets/pond.svg
+            if git diff --cached --quiet; then
+              echo "The pond is unchanged; nothing to commit."
+              exit 0
+            fi
+            git commit --quiet --message "pond: update the koi pond"
+            if git push --quiet; then
+              exit 0
+            fi
+            echo "Push rejected on attempt $attempt; redrawing on the new tip."
+            git fetch --quiet origin main
+            git reset --quiet --hard origin/main
+          done
+          exit 1
+
+      # Only after the push, so nobody is told they are on the board before
+      # the board is live. Issues left open are closed by the next run.
+      - name: Reply to visitors
+        run: python3 tools/pond.py reply --repo "$GITHUB_REPOSITORY" --replies "$RUNNER_TEMP/replies.json"
