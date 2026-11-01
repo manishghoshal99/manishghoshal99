@@ -9,7 +9,7 @@
 
 Hi, I'm Manish. I'm finishing a Master of Data Science at the University of Melbourne after building ML products at startups in Bengaluru, and I'm open to data science and ML engineering internships and graduate roles. I like problems where the model is the easy part: noise on a consumer heart monitor, names in coronial records, a hospital ward four hours from now. Most of that work is measurement.
 
-Before you scroll on, my koi is hungry.
+Before you scroll on, my koi would like a pellet.
 
 <a href="https://github.com/manishghoshal99/manishghoshal99/issues/new?title=koi%3A%20feed&body=Submit%20this%20issue%20and%20the%20koi%20will%20reply%20here%20in%20a%20minute%20or%20two.%20You%20do%20not%20need%20to%20write%20anything."><img src="assets/pond.svg" width="840" alt="My koi swimming in a pixel pond with lily pads. Click the water to feed it."></a>
 <a href="https://github.com/manishghoshal99/manishghoshal99/issues?q=is%3Aissue%20koi"><img src="assets/pond-board.svg" width="840" alt="The pond log: pellets fed so far, waves, the koi's mood today and the most recent visitors."></a>

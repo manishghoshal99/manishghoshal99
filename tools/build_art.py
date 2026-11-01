@@ -147,7 +147,7 @@ def typing(x0: int, y0: int, pitch: int, body: tuple[int, int, int, int]) -> tup
             caret = f'<rect class="u{i}" x="{x0}" y="{y - 2}" width="12" height="22" fill="{GOLD}"/>'
         svg.append(f'<g class="cv k{i}"><rect x="{x0 - 2}" y="{y - 4}" width="{bw}" height="28" '
                    f'fill="{WINDOW}"/>{caret}</g>')
-    css.insert(0, f".cv{{animation-duration:{CYCLE}s;animation-timing-function:step-end;animation-iteration-count:infinite}}")
+    css.insert(0, f".cv{{transform:translateX({bw}px);animation-duration:{CYCLE}s;animation-timing-function:step-end;animation-iteration-count:infinite}}")
     clip = f'<clipPath id="tb"><rect x="{bx}" y="{by}" width="{bw}" height="{bh}"/></clipPath>'
     return f'<defs>{clip}</defs><g clip-path="url(#tb)">{"".join(svg)}</g>', "".join(css)
 
