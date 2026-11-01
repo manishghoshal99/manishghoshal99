@@ -1,12 +1,21 @@
 {
  "since": "2026-11-01",
- "feeds": 0,
- "waves": 0,
- "max_issue": 0,
+ "feeds": 1,
+ "waves": 1,
+ "max_issue": 2,
  "today": {
   "date": "2026-11-01",
-  "feeds": 0,
-  "done": []
+  "feeds": 1,
+  "done": [
+   "manishghoshal99:wave",
+   "manishghoshal99:feed"
+  ]
  },
- "recent": []
+ "recent": [
+  {
+   "login": "manishghoshal99",
+   "action": "feed",
+   "date": "2026-11-01"
+  }
+ ]
 }
