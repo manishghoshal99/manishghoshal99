@@ -4,12 +4,9 @@
  "waves": 1,
  "max_issue": 3,
  "today": {
-  "date": "2026-11-01",
-  "feeds": 1,
-  "done": [
-   "manishghoshal99:wave",
-   "manishghoshal99:feed"
-  ]
+  "date": "2026-11-02",
+  "feeds": 0,
+  "done": []
  },
  "recent": [
   {
