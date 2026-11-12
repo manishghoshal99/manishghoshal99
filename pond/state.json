@@ -1,0 +1,70 @@
+{
+ "version": 3,
+ "since": "2026-11-01",
+ "updated": "2026-11-12",
+ "visits": {
+  "total": 110,
+  "raw": 110
+ },
+ "pellets": {
+  "total": 59,
+  "raw": 52
+ },
+ "waves": {
+  "total": 6,
+  "raw": 3
+ },
+ "history": [
+  {
+   "date": "2026-11-10",
+   "visits": 86,
+   "pellets": 39,
+   "waves": 4
+  },
+  {
+   "date": "2026-11-11",
+   "visits": 95,
+   "pellets": 53,
+   "waves": 4
+  },
+  {
+   "date": "2026-11-12",
+   "visits": 110,
+   "pellets": 59,
+   "waves": 6
+  }
+ ],
+ "koi": {
+  "count": 4,
+  "pace": "darting",
+  "streak": 1,
+  "week": 19,
+  "marks": 1
+ },
+ "roster": [
+  {
+   "name": "Epoch",
+   "variety": "kohaku",
+   "seed": 9,
+   "hatched": "2026-11-11"
+  },
+  {
+   "name": "Dropout",
+   "variety": "sanke",
+   "seed": 59,
+   "hatched": "2026-11-11"
+  },
+  {
+   "name": "Overfit",
+   "variety": "ogon",
+   "seed": 21,
+   "hatched": "2026-11-11"
+  },
+  {
+   "name": "Bias",
+   "variety": "tancho",
+   "seed": 4,
+   "hatched": "2026-11-12"
+  }
+ ]
+}
