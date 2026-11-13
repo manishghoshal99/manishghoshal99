@@ -1,13 +1,13 @@
 {
  "version": 3,
  "since": "2026-11-01",
- "updated": "2026-11-12",
+ "updated": "2026-11-13",
  "visits": {
-  "total": 110,
-  "raw": 110
+  "total": 126,
+  "raw": 126
  },
  "pellets": {
-  "total": 59,
+  "total": 69,
   "raw": 52
  },
  "waves": {
@@ -32,13 +32,19 @@
    "visits": 110,
    "pellets": 59,
    "waves": 6
+  },
+  {
+   "date": "2026-11-13",
+   "visits": 126,
+   "pellets": 69,
+   "waves": 6
   }
  ],
  "koi": {
   "count": 4,
   "pace": "darting",
   "streak": 1,
-  "week": 19,
+  "week": 21,
   "marks": 1
  },
  "roster": [
