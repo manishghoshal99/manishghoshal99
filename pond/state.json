@@ -1,7 +1,7 @@
 {
  "version": 3,
  "since": "2026-11-01",
- "updated": "2026-11-15",
+ "updated": "2026-11-16",
  "visits": {
   "total": 126,
   "raw": 126
@@ -50,11 +50,17 @@
    "visits": 126,
    "pellets": 69,
    "waves": 6
+  },
+  {
+   "date": "2026-11-16",
+   "visits": 126,
+   "pellets": 69,
+   "waves": 6
   }
  ],
  "koi": {
   "count": 4,
-  "pace": "darting",
+  "pace": "resting",
   "streak": 1,
   "week": 21,
   "marks": 1
