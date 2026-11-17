@@ -1,10 +1,10 @@
 {
  "version": 3,
  "since": "2026-11-01",
- "updated": "2026-11-16",
+ "updated": "2026-11-17",
  "visits": {
-  "total": 126,
-  "raw": 126
+  "total": 127,
+  "raw": 127
  },
  "pellets": {
   "total": 69,
@@ -54,6 +54,12 @@
   {
    "date": "2026-11-16",
    "visits": 126,
+   "pellets": 69,
+   "waves": 6
+  },
+  {
+   "date": "2026-11-17",
+   "visits": 127,
    "pellets": 69,
    "waves": 6
   }
