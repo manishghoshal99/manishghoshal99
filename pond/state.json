@@ -1,10 +1,10 @@
 {
  "version": 3,
  "since": "2026-11-01",
- "updated": "2026-11-20",
+ "updated": "2026-11-21",
  "visits": {
-  "total": 127,
-  "raw": 127
+  "total": 128,
+  "raw": 128
  },
  "pellets": {
   "total": 69,
@@ -80,14 +80,20 @@
    "visits": 127,
    "pellets": 69,
    "waves": 6
+  },
+  {
+   "date": "2026-11-21",
+   "visits": 128,
+   "pellets": 69,
+   "waves": 6
   }
  ],
  "koi": {
   "count": 4,
-  "pace": "resting",
-  "streak": 1,
-  "week": 0,
-  "marks": 1
+  "pace": "cruising",
+  "streak": 2,
+  "week": 6,
+  "marks": 2
  },
  "roster": [
   {
